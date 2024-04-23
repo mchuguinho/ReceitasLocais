@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons color="success" slot="start">
+      <ion-back-button olor="success"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="success" class="ion-justify-content-center">Receitas Locais</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid [fixed]="true">
+    <ion-row class="ion-justify-content-between">
+      <ion-col size="6">
+        <ion-card class="ion-text-center" color="success">
+          <ion-img alt="Rojões à moda do Minho" src="../assets/img/rojoes.jpg" ></ion-img>
+          <ion-card-header>
+            <ion-card-title>
+              <h3>Rojões à moda do Minho</h3>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-button fill="solid" shape="round" expand="full" color="dark" routerLink="/rojoes">Modo de Preparação</ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-text-center" color="success">
+          <ion-img alt="Torta de Viana" src="../assets/img/torta.jpg" ></ion-img>
+          <ion-card-header>
+            <ion-card-title>
+              <h3>Torta de Viana</h3>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-button fill="solid" shape="round" expand="full" color="dark" routerLink="/torta">Modo de Preparação</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-between">
+      <ion-col size="6">
+        <ion-card class="ion-text-center" color="success">
+          <ion-img alt="Bacalhau à Gil Eanes" src="../assets/img/bacalhau.jpg" ></ion-img>
+          <ion-card-header>
+            <ion-card-title>
+              <h3>Bacalhau à Gil Eanes</h3>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-button fill="solid" shape="round" expand="full" color="dark" routerLink="/bacalhau">Modo de Preparação</ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-text-center" color="success">
+          <ion-img alt="Sidónios" src="../assets/img/sidonios.jpg" ></ion-img>
+          <ion-card-header>
+            <ion-card-title>
+              <h3>Sidónios</h3>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-button fill="solid" shape="round" expand="full" color="dark" routerLink="/sidonio">Modo de Preparação</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer [translucent]="false">
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" (click)="sobreMim()">
+          <ion-icon color="success" name="accessibility-outline"></ion-icon>
+          Sobre Mim
+        </ion-tab-button>
+        <ion-tab-button tab="radio" (click)="viana()">
+          <ion-icon color="success" name="heart-outline"></ion-icon>
+          Viana do Castelo
+        </ion-tab-button>
+        <ion-tab-button tab="library" (click)="restaurantes()">
+          <ion-icon color="success" name="storefront-outline"></ion-icon>
+          Restaurantes
+        </ion-tab-button>
+        <ion-tab-button tab="search" (click)="receitas()">
+          <ion-icon color="success" name="restaurant-outline"></ion-icon>
+          Receitas
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

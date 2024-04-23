@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-restaurantes',
+  templateUrl: './restaurantes.page.html',
+  styleUrls: ['./restaurantes.page.scss'],
 })
-export class HomePage {
+export class RestaurantesPage {
 
   constructor(private router: Router) {
   }
@@ -24,5 +24,5 @@ export class HomePage {
   public receitas() {
     this.router.navigateByUrl('/receitas');
   }
-}
 
+}

@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons color="success" slot="start">
+      <ion-back-button color="success"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-justify-content-center" color="success">Modo de Preparação</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-img src="assets/img/torta.jpg"></ion-img>
+    <h1>Ingredientes:</h1>
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>7,5g de Fermento em pó</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>150 g de Açúcar</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>180 g de Farinha de trigo</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>9 ovos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>10g de amido de milho</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>75g de açúcar</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>70ml de água</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>8 gemas</ion-label>
+      </ion-item>
+    </ion-list>
+    <h1>Preparação:</h1>
+    <div>
+      <p>1. Para a massa: Bater os ovos e aos poucos adicionar o açúcar,continuando sempre a bater, até que fique um creme volumoso eesbranquiçado.</p>
+      <p>2. Acrescentar a farinha e o fermento, envolvendo bem.</p>
+      <p>3. Estender num tabuleiro rectangular previamente untado com papel vegetal e farinha e levar ao forno a pré-aquecido a 185ºC durante 20/25min.</p>
+      <p>4. Para o Recheio: Misturar o açúcar com a amido de milho, acrescentar a água e a gemas, envolver.</p>
+      <p>5. Levar ao lume até engrossar.</p>
+      <p>6. Colocar numa tigela e deixar arrefecer.</p>
+      <p>7. Quando a massa estiver feita, colocar a mesma sobre um pano de cozinha, e rechear a face virada para cima ainda com o bolo morno, e começar a enrolar.
+      </p>
+    </div>
+    <ion-button expand="block" color="success" (click)="setOpen(true)">Curiosidade</ion-button>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="success">
+            <ion-title color="dark">Curiosidade</ion-title>
+            <ion-buttons slot="end">
+              <ion-icon color="dark" name="close-outline"></ion-icon>
+              <ion-button color="dark" (click)="setOpen(false)">Fechar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>Este é um doce com séculos de história e certificado como doce de Viana do Castelo.</p>
+          <p>As Tortas de Viana surgiram em 1505.</p>
+          <p>Reza a lenda que a receita teve origem no Convento de Santa Ana.</p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>

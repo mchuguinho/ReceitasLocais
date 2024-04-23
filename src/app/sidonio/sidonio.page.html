@@ -1,0 +1,82 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons color="success" slot="start">
+      <ion-back-button color="success"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-justify-content-center" color="success">Modo de Preparação</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-img src="assets/img/sidonios.jpg"></ion-img>
+    <h1>Ingredientes:</h1>
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>500 g de massa folhada</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>500 g de açúcar</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>125 g de amêndoa moída</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>25 g de farinha</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>6 Ovos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>2,5 dl de água</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>1 casquinha de limão</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Açúcar em pó para polvilhar</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Farinha para polvilhar</ion-label>
+      </ion-item>
+    </ion-list>
+    <h1>Preparação:</h1>
+    <div>
+      <p>1. Leve ao lume um tacho com a água, o açúcar e a casca de limão, deixe ferver até atingir o ponto pérola, retire do lume e rejeite a casca de limão. Numa tigela, bata os ovos com a farinha e a amêndoa moída e junte depois o preparado anterior, em fio e mexendo sempre. Verta para o tacho e leve novamente ao lume, mexendo continuamente até engrossar. Retire do lume e reserve.</p>
+      <p>2. Estenda a massa folhada numa bancada polvilhada com farinha até obter um retângulo, pincele com água e enrole com a parte pincelada virada para dentro. Depois corte em rodelas, distribua por forminhas e estenda um pouco com os dedos de modo a forrar bem.</p>
+      <p>3. Divida o preparado dos ovos pelas forminhas e leve ao forno pré-aquecido a 180ºc durante 40 minutos. Retire do forno, deixe amornar, desenforme e sirva polvilhados com açúcar em pó.</p>
+    </div>
+    <ion-button expand="block" color="success" (click)="setOpen(true)">Curiosidade</ion-button>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="success">
+            <ion-title color="dark">Curiosidade</ion-title>
+            <ion-buttons slot="end">
+              <ion-icon color="dark" name="close-outline"></ion-icon>
+              <ion-button color="dark" (click)="setOpen(false)">Fechar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>O nome do bolo é uma homenagem a Sidónio Pais, ex-presidente de Portugal, que faleceu em 1918.</p>
+          <p>Outra curiosidade é que a Casa Brasileira patenteou o doce em seu nome e, durante muito anos, eram o único local onde podia saborear um Sidónio.</p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>

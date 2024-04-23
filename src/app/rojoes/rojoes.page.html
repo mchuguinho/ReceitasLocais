@@ -1,0 +1,115 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons color="success" slot="start">
+      <ion-back-button color="success"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-justify-content-center" color="success">Modo de Preparação</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <ion-img src="assets/img/rojoes.jpg"></ion-img>
+    <h1>Ingredientes:</h1>
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>1300g de rojões (perna de porco) partido aos nacos</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Redenho</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Tripa enfarinhada</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Sangue de porco cozido</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Fígado de porco</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Batatas para fritar</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Banha ou óleo</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Sal</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>6 dentes de alho esmagados</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Pimenta preta</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Vinho branco</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>3 folhas de loureiro</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Cominhos em pó</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="arrow-forward-outline"></ion-icon>
+        <ion-label>Colorau em pó</ion-label>
+      </ion-item>
+    </ion-list>
+    <h1>Preparação:</h1>
+    <div>
+      <p>1. Comece por preparar a marinada, coloque os rojões e o redenho a marinar de preferência de um dia para o outro.
+
+        Num tacho espaçoso coloque a banha (eu coloquei óleo) a cobrir o fundo. Coe a marinada e junte somente os rojões, o redenho não.
+        
+        Deixe rijar lentamente, mexendo de vez em quando acrescentando vinho branco sempre que necessário e nunca água.
+        
+        Numa frigideira anti-aderente coloque o redenho sem qualquer gordura (pois vai largar bastante), vá virando e deixe ficar douradinhos. Assim que estiverem prontos reserve.</p>
+      <p>2. Entretanto num tacho coloque água, tempere com sal e 1 folha de loureiro e coza o sangue juntamente com o fígado.
+
+        Coze rápido, por isso assim que estiver cozido, desligue e mantenha tudo dentro do tacho com a água.
+        Frite as batatas partidas aos cubos e de seguida frite a tripa enfarinhada partida às tirinhas.</p>
+      <p>3. Depois dos rojões prontos, retire o sangue e fígado (reservando a água da cozedura para fazer papas de sarrabulho), parta aos bocados e junte aos rojões, assim como as batatas fritas, a tripa enfarinhada e o redenho.
+
+        Envolva tudo com cuidado para se misturarem os sabores.
+        Sirva polvilhando com cominhos, enfeite com limão e salsa (ou pickles). Acompanhe com arroz seco e salada de alface.</p>
+    </div>
+    <ion-button expand="block" color="success" (click)="setOpen(true)">Curiosidade</ion-button>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="success">
+            <ion-title color="dark">Curiosidade</ion-title>
+            <ion-buttons slot="end">
+              <ion-icon color="dark" name="close-outline"></ion-icon>
+              <ion-button color="dark" (click)="setOpen(false)">Fechar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>Os Rojões à Moda do Minho são um prato tradicionalmente associado à região do Minho, no norte de Portugal. </p>
+          <p>Essa iguaria é uma parte fundamental da gastronomia minhota e tem uma história que remonta a séculos atrás.</p>
+          <p>A origem dos Rojões à Moda do Minho está ligada à tradição agrícola e pastoril da região.</p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>
